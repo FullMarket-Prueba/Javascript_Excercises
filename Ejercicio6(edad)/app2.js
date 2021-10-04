@@ -5,18 +5,34 @@ const resolve = document.querySelector('#p-resolve');
 
 btnCalculate.addEventListener('click', calculate_age);
 
-function calculate_age() {  
-  let today = new Date();
-  let birthday = userAge.value.split('-');
-  let myBirthday = new Date(`${birthday[0]}-${birthday[1]}-${Number(birthday[2])+1}`);
+function calculate_age() {
+  
+  const user = nameUser.value;
+  
+  let current_year = new Date();
 
-  let current_age = today.getFullYear() - myBirthday.getFullYear();
-  let month_difference = (today.getMonth()) - myBirthday.getMonth();
-  let day_difference = today.getDay() - myBirthday.getDay();
-
-   if (month_difference >= 0 && day_difference >=0) {
-    console.log(current_age);
+  let birthday = userAge.value;
+  birthday = birthday.split('-');
+  let myBirthday = birthday.map(element=> Number(element));
+  
+  let year = current_year.getFullYear() - myBirthday[0];
+  let month = (current_year.getMonth()+1) - myBirthday[1];
+  let day = (current_year.getDate()) - myBirthday[2];
+    
+  if (year > 18) {
+    resolve.textContent = `Sr@ ${user}, usted puede votar`;
+    resolve.style.color = '#008000';
+    resolve.style.backgroundColor = '#6de3f8';
+  } else if (year===18 && month>0) {
+    resolve.textContent = `Sr@ ${user}, usted puede votar`;
+    resolve.style.color = '#008000';
+    resolve.style.backgroundColor = '#6de3f8';
+  } else if (year===18 && month ===0 && day >=0) {
+    resolve.textContent = `Sr@ ${user}, usted puede votar`;
+    resolve.style.color = '#008000';
+    resolve.style.backgroundColor = '#6de3f8';
   } else {
-    console.log(current_age-1);
+    resolve.textContent = `Sr@ ${user}, usted NO puede votar`;
+    resolve.style.color = '#800606';    
   }
 }
