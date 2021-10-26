@@ -18,21 +18,32 @@ function calculate_age() {
   let year = current_year.getFullYear() - myBirthday[0];
   let month = (current_year.getMonth()+1) - myBirthday[1];
   let day = (current_year.getDate()) - myBirthday[2];
-    
-  if (year > 18) {
+
+  if (year>=18 && month>=0 && day>=0) {
     resolve.textContent = `Sr@ ${user}, usted puede votar`;
     resolve.style.color = '#008000';
-    resolve.style.backgroundColor = '#6de3f8';
-  } else if (year===18 && month>0) {
-    resolve.textContent = `Sr@ ${user}, usted puede votar`;
-    resolve.style.color = '#008000';
-    resolve.style.backgroundColor = '#6de3f8';
-  } else if (year===18 && month ===0 && day >=0) {
-    resolve.textContent = `Sr@ ${user}, usted puede votar`;
-    resolve.style.color = '#008000';
-    resolve.style.backgroundColor = '#6de3f8';
+    resolve.style.backgroundColor = '#6de3f8';      
   } else {
     resolve.textContent = `Sr@ ${user}, usted NO puede votar`;
-    resolve.style.color = '#800606';    
+    resolve.style.color = '#800606';      
   }
+
+
+    
+  // if (year > 18) {
+  //   resolve.textContent = `Sr@ ${user}, usted puede votar`;
+  //   resolve.style.color = '#008000';
+  //   resolve.style.backgroundColor = '#6de3f8';
+  // } else if (year===18 && month>0) {
+  //   resolve.textContent = `Sr@ ${user}, usted puede votar`;
+  //   resolve.style.color = '#008000';
+  //   resolve.style.backgroundColor = '#6de3f8';
+  // } else if (year===18 && month ===0 && day >=0) {
+  //   resolve.textContent = `Sr@ ${user}, usted puede votar`;
+  //   resolve.style.color = '#008000';
+  //   resolve.style.backgroundColor = '#6de3f8';
+  // } else {
+  //   resolve.textContent = `Sr@ ${user}, usted NO puede votar`;
+  //   resolve.style.color = '#800606';    
+  // }
 }
