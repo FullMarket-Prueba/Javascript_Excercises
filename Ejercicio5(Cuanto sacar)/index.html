@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>¿Cuánto debo sacar?</title>
+  <link rel="shortcut icon" href="icono.jpeg" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>¿Cuánto debo sacar?</h1>
+  </header>
+  <main>
+    <section class="s1">
+      <img src="muneca.png" alt="Niña estudiando">
+      <p>
+        Ella es Ximena, y está preocupada porque no sabe cuánto debe sacar en su última nota del semestre. Las calificaciones en su escuela van de 1 a 5. Para pasar, necesita como mínimo un 3.5 en su nota total. Teniendo en cuenta la siguiente tabla de ponderado, donde :
+      </p>
+      <ul>
+        <li>NOTA 1: 25%</li>
+        <li>NOTA2 2: 35%</li>
+        <li>NOTA3 : 40%</li>
+      </ul>
+      <p>Deberás mostrar la nota mínima sugerida para pasar la materia. Ten en cuenta que:</p>        
+      <ul>
+        <li>En caso de que ya no alcance a pasar, deberás mostrar un mensaje para ello.</li>        
+      </ul>
+      <p><strong>Ejemplo:</strong></p>
+      <ul>
+        <li>Nota1: 4.1</li>
+        <li>Nota2: 3.0</li>
+      </ul>
+      <p>Ximena requiere una nota mínima de 3.5</p>
+    </section>
+    <section class="s2">
+      <table id="notas">
+        <tr>
+          <th>Nota1</th>
+          <th>Nota2</th>
+          <th>Nota Necesaria</th>          
+        </tr>        
+        <tr>
+          <td><input type="number" id="n1" value="4.1" min="1"></td>
+          <td><input type="number" id="n2" value="3.0" min="1"></td>
+          <td><p id="n3"></p></td>          
+        </tr>
+      </table>
+      <button id="btn-calcular">Calcular</button>
+    </section>    
+  </main>
+</body>
+<script src="app.js"></script>
+</html>

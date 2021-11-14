@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Generador de Tweet</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor-title">
+            <h2 class="title-header">Bienvenido</h2>
+            <span class="inicialCliente" id="inicialCliente"></span>
+        </div>        
+        <span class="mensaje-header">Deja Tu comentario</span>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <h1 class="title-principal">Bienvenido</h1>
+                <div class="contenedor-usuario">
+                    <i class="far fa-user icono"></i>
+                    <input type="text" class="inputNombre" name="nombre" id="nombreUsuario">
+                </div>
+                <div class="contenedor-mensaje">
+                    <textarea class="mensaje"  maxlength="200" name="mensaje" id="mensaje" placeholder="Máximo 200 caracteres" cols="30" rows="10"></textarea>
+                </div>
+                <span class="caracteres" id="caracteres">200</span>                
+            </div>
+            <div class="container-msj">
+                <p id="mensajeSalida"></p>                    
+            </div>
+            <div class="contenedorButton">
+                <button class="btnEnviar" id="btnEnviar">Publicar Mensaje</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="js/app.js"></script>
+<script src="https://kit.fontawesome.com/cec3a6c7b1.js" crossorigin="anonymous"></script>
+
+</html>
