@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="cart.css">
-  <link rel="shortcut icon" href="Images/house.png" type="image/x-icon">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+   rel="stylesheet"
+   href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+   integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+   crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="shortcut icon" href="Images/house.png" type="image/x-icon" />
   <title>Market place - ER</title>
-</head>
-<body>
+ </head>
+ <body>
   <header><h1>The best in soccer footballs</h1></header>
   <div class="cart-list">
-    <table id="table-products">
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>SubTotal</th>                        
-        <th>Clear</th>                        
-      </tr>      
-    </table>
-    <div class="result"><label for="">Total a pagar</label><p id="result"></p></div>
+   <table id="table-products">
+    <tr class="t-und">
+     <th class="th-products t-und">Product</th>
+     <th class="th-products t-und">Price</th>
+     <th class="th-products t-und">Quantity</th>
+     <th class="th-products t-und">substract</th>
+     <th class="th-products t-und">Add</th>
+     <th class="th-products t-und">Clear</th>
+     <th class="th-products t-und">SubTotal</th>
+    </tr>
+    <tr class="t-und">
+     <td class="td-products t-und">Producto 1000</td>
+     <td class="td-products t-und">100</td>
+     <td class="td-products t-und">0</td>
+     <td class="td-products t-und">-</td>
+     <td class="td-products t-und">+</td>
+     <td class="td-products t-und">Clear</td>
+     <td class="td-products t-und">100</td>
+    </tr>
+   </table>
+   <div class="result">
+    <label for="">Total a pagar</label>
+    <p id="result"></p>
+   </div>
   </div>
   <nav>
-    <button id="btn-cart">
-      <i class="fas fa-cart-plus"></i>
-      <p id="p-counter">0</p>
-    </button>    
+   <button id="btn-cart">
+    <i class="fas fa-cart-plus"></i>
+    <p id="p-counter">0</p>
+   </button>
   </nav>
   <section><h2>Market Sports</h2></section>
   <main id="main-market"></main>
   <footer>Edwin Rozo Gómez - Software Developer</footer>
   <script src="products.js"></script>
   <script src="app.js"></script>
-</body>
+ </body>
 </html>

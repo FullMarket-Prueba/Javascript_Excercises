@@ -56,34 +56,29 @@ function renderCards() {
 function SelectToCart(event) {
     const current_id = event.target.id.split('-')[2];               
     products.forEach(element => {        
-        if (cart.indexOf(element) === -1) {
             if (current_id == element.id) {
-                cart.push(element)
-            }
+              cart.push(element)        
         }
     });
     AddToCart();       
 }
 
 function AddToCart() {
-    return cart.map(element=> {
-        console.log(element);
+    table_products.innerHTML = '';
+    return cart.map(element=> {        
         render_cart(element);
     });
 }
 
-function render_cart(cart) {
-    table_products.innerHTML = table_products.innerHTML +
-       ` <tr>
-           <td>${cart.name}</td>
-           <td>${cart.price}</td>        
-           <td class="td-quantity">
-             <button class="substract-cart">-</button>
-               <p id="p_quantity">${0}</p>
-            <button class="add-cart">+</button>
-           </td>
-           <td>0</td>
-           <td><button class="clear-cart"><img src="../Images/Trash.png" alt="Clear" class="img-trash"></button></td>
-         </tr>
-    `;
+function render_cart(cart) {        
+    table_products.innerHTML = table_products.innerHTML + `<tr class="t-und">
+    <td class="td-products t-und">${cart.name}</td>
+    <td class="td-products t-und">${cart.price}</td>
+    <td class="td-products t-und">${0}</td>
+    <td class="td-products t-und"><button class="substract-cart">-</button></td>
+    <td class="td-products t-und"><button class="add-cart">+</button></td>
+    <td class="td-products t-und"><button class="clear-cart">Clear</button></td>
+    <td class="td-products t-und">100</td>
+   </tr>
+  </table>`;
 };
