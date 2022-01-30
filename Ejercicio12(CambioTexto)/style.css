@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fuzzy+Bubbles&family=Lobster&family=Pacifico&family=Shadows+Into+Light&family=Vujahday+Script&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;  
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background:linear-gradient(45deg, #000203,#012047,#015c91,#027dc5,#06eff7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: yellowgreen;
+  font-size: 5rem;
+  text-align: center;
+}
+
+hr {  
+  width: 90%;
+}
+
+.container {
+  margin-top: 1rem;
+  width: 90%;
+  height: 80%;  
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  width: 60rem;
+  height: 30rem;
+  border-radius: 15px;
+  overflow-y:scroll;
+  resize: none;
+  background-color: #aecff8;
+  text-align: justify;    
+  padding: 1rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+  width: 80%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 0.5rem;
+  width: 8rem;
+  border: groove #03816c;
+  border-radius: 15px;
+  background-color: #012047;
+  color: #fff;
+  cursor: pointer;
+}
